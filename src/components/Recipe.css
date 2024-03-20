@@ -1,0 +1,16 @@
+#cake-card{
+    text-align: center;
+    border-style: solid;
+    margin: 5px;
+}
+
+#cake-name{
+    margin-bottom: 20px;
+}
+
+#cake-info{
+}
+
+#ingredients-list{
+    font-weight: normal;
+}
