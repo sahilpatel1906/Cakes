@@ -10,7 +10,8 @@
 }
 
 #cake-info{
-    text-align: center;
+    text-align: left;
+    margin: 5px;
 }
 
 #ingredients-list{
