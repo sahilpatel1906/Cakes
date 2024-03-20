@@ -16,7 +16,7 @@ const Recipe = ({cakeName, cakeIngredients, cakePrice, cakeRating, total, setTot
             <h4>Price: {cakePrice}</h4>
             <h4>Rating: {cakeRating}</h4>
             </section>
-            <button onClick={handleSale}>Sell Cake</button>
+            <button id="sale-button" onClick={handleSale}>Sell {cakeName} Cake</button>
         </article>
     );
 }

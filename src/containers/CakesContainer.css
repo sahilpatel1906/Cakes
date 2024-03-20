@@ -9,3 +9,8 @@ margin-bottom: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
+
+#total-sales{
+    margin-top: 30px;
+    text-align: center;
+}

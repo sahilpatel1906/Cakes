@@ -3,6 +3,7 @@ import Recipe from "../components/Recipe";
 import "./CakesContainer.css"
 
 const CakesContainer = () => {
+    const [totalSales, setTotalSales] = useState(0);
     const [cakes, SetCakes] = useState(
         [
             // Victora Sponge
@@ -49,16 +50,18 @@ const CakesContainer = () => {
                 rating: 5
             }
         ]
-    ) 
+    ); 
 
     const cakeElements= cakes.map((cake, index) => {               
-        return <Recipe cakeName={cake.cakeName} cakeIngredients={cake.ingredients} cakePrice={cake.price} cakeRating={cake.rating} key={index}/>   
-    }) 
+        return <Recipe cakeName={cake.cakeName} cakeIngredients={cake.ingredients} cakePrice={cake.price} cakeRating={cake.rating} total={totalSales} setTotal={setTotalSales} key={index}/>   
+    }); 
 
     return ( 
         <>
             <h2 id="cake-title">Cakes</h2>
-            <div id="cakes">{cakeElements}</div>          
+            <div id="cakes">{cakeElements}</div>
+            <h3 id="total-sales">Total Sales: {totalSales}</h3>
+
         </>
     );
 }
