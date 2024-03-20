@@ -1,6 +1,10 @@
 import "./Recipe.css"
 
-const Recipe = ({cakeName, cakeIngredients, cakePrice, cakeRating}) => {
+const Recipe = ({cakeName, cakeIngredients, cakePrice, cakeRating, total, setTotal}) => {
+
+    const handleSale = () => {
+        setTotal(total+1);
+    }
 
     return ( 
         <article id="cake-card">
@@ -12,7 +16,7 @@ const Recipe = ({cakeName, cakeIngredients, cakePrice, cakeRating}) => {
             <h4>Price: {cakePrice}</h4>
             <h4>Rating: {cakeRating}</h4>
             </section>
-
+            <button onClick={handleSale}>Sell Cake</button>
         </article>
     );
 }
