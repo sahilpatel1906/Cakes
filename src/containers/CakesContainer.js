@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Recipe from "../components/Recipe";
+import "./CakesContainer.css"
 
 const CakesContainer = () => {
     const [cakes, SetCakes] = useState(
@@ -32,8 +33,7 @@ const CakesContainer = () => {
                 ],
                 price: 2,
                 rating: 3
-            },
-        
+            },  
             // Carrot Cake
             {
                 cakeName: "Carrot Cake",
@@ -51,17 +51,14 @@ const CakesContainer = () => {
         ]
     ) 
 
-    const cakeElements= cakes.map((cake, index) => {
-                
-        return <Recipe cakeName={cake.cakeName} cakeIngredients={cake.ingredients} cakePrice={cake.price} cakeRating={cake.rating} key={index}/>
-    
+    const cakeElements= cakes.map((cake, index) => {               
+        return <Recipe cakeName={cake.cakeName} cakeIngredients={cake.ingredients} cakePrice={cake.price} cakeRating={cake.rating} key={index}/>   
     }) 
 
     return ( 
         <>
-
-        <h2>Cakes</h2>
-        {cakeElements}
+            <h2 id="cake-title">Cakes</h2>
+            <div id="cakes">{cakeElements}</div>          
         </>
     );
 }

@@ -1,0 +1,9 @@
+#cake-title{
+text-align: center;
+}
+
+#cakes {
+    margin:auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
